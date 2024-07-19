@@ -1,0 +1,142 @@
+body {
+    background: #21252b;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0 20px; /* Add some padding to avoid content touching the edges */
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-size: 5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.text .tagline {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 1.5rem;
+    color:powderblue;
+    text-align: center;
+}
+
+form {
+    background: #2c313c;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+}
+
+fieldset {
+    border: none;
+}
+
+legend {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 4px;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 1em;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+p {
+    margin-top: 10px;
+}
+
+a {
+    color: #61dafb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.world-gif {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.world-gif img {
+    max-width: 100%;
+    height: auto;
+    justify-self: flex-end;
+}
+
+/* Google Sign-In Button */
+.google-sign-in {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4285F4; /* Google Blue */
+    color: #fff;
+    font-size: 1em;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    border: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.google-sign-in:hover {
+    background-color: #357ae8; /* Slightly darker blue */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.google-sign-in ion-icon {
+    margin-right: 8px; /* Space between the icon and text */
+    font-size: 1.2em;
+}

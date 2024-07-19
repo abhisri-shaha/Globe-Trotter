@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= buttonAction %> Family Member</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/family.css">
+  <link rel="stylesheet" href="./styles/update.css">
+</head>
+
+<body>
+  <h1><%= buttonAction %> Family Member</h1>
+  <form action="<%= formAction %>" method="post">
+    <% if (formAction == "/editusername") { %>
+      <p>Edit name:</p>
+      <input type="text" name="name" required autofocus>
+      <input type="hidden" name="userId" value="<%= userId %>">
+    <% } else { %>
+        <% if (formAction == "/new") { %>
+          <p>What's your name?</p>
+          <input type="text" name="name" required autofocus>
+        <% } else { %>
+          <input type="hidden" name="userId" value="<%= userId %>">
+        <% } %>
+        <p>Pick a color:</p>
+        <% const colors = [
+        "violet",
+        "mediumorchid",
+        "blueviolet",
+        "darkorchid",
+        "darkviolet",
+        "mediumslateblue",
+        "slateblue",
+        "royalblue",
+        "deepskyblue",
+        "dodgerblue",
+        "skyblue",
+        "lightblue",
+        "powderblue",
+        "aquamarine",
+        "mediumaquamarine",
+        "turquoise",
+        "lightseagreen",
+        "mediumseagreen",
+        "seagreen",
+        "forestgreen",
+        "limegreen",
+        "springgreen",
+        "mediumspringgreen",
+        "palegreen",
+        "darkseagreen",
+        "yellowgreen",
+        "olivedrab",
+        "darkkhaki",
+        "khaki",
+        "gold",
+        "goldenrod",
+        "darkgoldenrod",
+        "peru",
+        "sienna",
+        "lightcoral",
+        "indianred",
+        "crimson",
+        "red",
+        "orangered",
+        "tomato",
+        "coral",
+        "darkorange"
+      ];
+      %>
+        <% colors.forEach(function(colorOption) { %>
+          <input type="radio" name="color" id="<%= colorOption %>" value="<%= colorOption %>" <%= locals.color == colorOption ? "checked" : "" %> required/>
+          <label for="<%= colorOption %>"><span class="<%= colorOption %>" style="background: <%= colorOption %>;"></span></label>
+        <% }); %>
+    <% } %>
+    <div class="spacer"></div>
+    <button type="submit"><%= buttonAction %></button>
+  </form>
+</body>
+
+</html>

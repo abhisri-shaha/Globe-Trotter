@@ -270,13 +270,7 @@ app.get("/logout", (req, res, next) => {
     if (err) {
       return next(err);
     }
-    // req.session.destroy((err) => {
-    //   if (err) {
-    //     return next(err);
-    //   }
-    //   res.clearCookie("user_session"); // clear session on logout
-      res.redirect("/"); // Redirect to home or login page
-    // });
+    res.redirect("/");
   });
 });
 
